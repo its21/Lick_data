@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://www.nofs.navy.mil/data/fchpix/cfch_VOTable.xsl"?>
+<!DOCTYPE VOTABLE SYSTEM "http://us-vo.org/xml/VOTable.dtd">
+<VOTABLE version="1.0">
+ <DESCRIPTION>
+  United States Naval Observatory Flagstaff Station       02Sep2014-04:15:06
+  Astronomical Image and Catalogue Server:
+            http://www.nofs.navy.mil/data/fchpix/
+  Please send questions and problem reports to:
+            sel@nofs.navy.mil
+  
+ </DESCRIPTION>
+ <DEFINITIONS>
+  <COOSYS ID="eq_FK5" equinox="2000.00" epoch="2000.00" system="eq_FK5"/>
+  <DESCRIPTION>Coordinate system is FK5 equinox=J2000.0, epoch=2000.0</DESCRIPTION>
+ </DEFINITIONS>
+ <RESOURCE name="USNOB" type="results">
+  <PARAM ID="ipFIELD" datatype="char" name="Field Name" value="NoName" arraysize="*"/>
+  <PARAM ID="ipCAT_ID" datatype="char" name="Catalogue ID" value="USNOB" arraysize="*"/>
+  <PARAM ID="ipNOBJECTS" datatype="int" name="Number of Objects In File" value="153"/>
+  <PARAM ID="ipEQUINOX" unit="yr" datatype="double" precision="2" name="Equinox" value="2000.00"/>
+  <PARAM ID="ipEPOCH" unit="yr" datatype="double" precision="2" name="Epoch" value="2000.00"/>
+  <PARAM ID="ipRA" unit="deg" datatype="double" precision="6" name="Center RA" value="1.013950"/>
+  <PARAM ID="ipDEC" unit="deg" datatype="double" precision="6" name="Center DEC" value="32.019680"/>
+  <PARAM ID="ipRADIUS" unit="deg" datatype="double" precision="6" name="Circle Radius" value="0.050000"/>
+  <PARAM ID="ipMAGNITUDE" datatype="char" name="Primary Sort Color" value="R2" arraysize="*"/>
+  <PARAM ID="ipBR_MAG" unit="mag" datatype="double" precision="2" name="Bright Magnitude Limit" value="0.00"/>
+  <PARAM ID="ipFT_MAG" unit="mag" datatype="double" precision="2" name="Faint Magnitude Limit" value="100.00"/>
+  <PARAM ID="ipCOLOR" datatype="char" name="Color0 minus Color1" value="B2-R2" arraysize="*"/>
+  <PARAM ID="ipBR_MIN" unit="mag" datatype="double" precision="2" name="Color Limit: Minimum B-R" value="-100.00"/>
+  <PARAM ID="ipBR_MAX" unit="mag" datatype="double" precision="2" name="Color Limit: Maximum B-R" value="100.00"/>
+  <PARAM ID="ipMU_MIN" unit="mas.yr-1" datatype="double" precision="2" name="Min. Proper Motion" value="0.00"/>
+  <PARAM ID="ipMU_MAX" unit="mas.yr-1" datatype="double" precision="2" name="Max. Proper Motion" value="10000.00"/>
+  <PARAM ID="ipSPOS_MIN" unit="mas" datatype="double" precision="2" name="Min. Position Error" value="0.00"/>
+  <PARAM ID="ipSPOS_MAX" unit="mas" datatype="double" precision="2" name="Max. Position Error" value="10000.00"/>
+  <PARAM ID="ipSMU_MIN" unit="mas.yr-1" datatype="double" precision="2" name="Min. Proper Motion Error" value="0.00"/>
+  <PARAM ID="ipSMU_MAX" unit="mas.yr-1" datatype="double" precision="2" name="Max. Proper Motion Error" value="10000.00"/>
+  <PARAM ID="ipSD_MAX" unit="deg-2" datatype="double" precision="2" name="Maximum Surface Density" value="10000000.00"/>
+  <PARAM ID="ipMIN_PTS" datatype="int" name="Min. Number of Observations" value="0"/>
+  <PARAM ID="ipMAX_PTS" datatype="int" name="Max. Number of Observations" value="10"/>
+  <PARAM ID="ipMIN_SG" datatype="int" name="Min. Star/Galaxy Sep. index" value="0"/>
+  <PARAM ID="ipMAX_SG" datatype="int" name="Max. Star/Galaxy Sep. index" value="19"/>
+  <PARAM ID="ipFLGMASK0" datatype="int" name="Lower Bit Mask for Flags" value="0"/>
+  <PARAM ID="ipFLGMASK1" datatype="int" name="Upper Bit Mask for Flags" value="-1"/>
+  <PARAM ID="ipCOLBITS" datatype="int" name="Column Selection Bits" value="4271"/>
+  <TABLE>
+   <FIELD ID="id" datatype="char" name="id" ucd="ID_MAIN" arraysize="*"/>
+   <FIELD ID="RA" unit="deg" datatype="double" precision="7" ref="eq_FK5" name="RA" ucd="POS_EQ_RA_MAIN"/>
+   <FIELD ID="DEC" unit="deg" datatype="double" precision="6" ref="eq_FK5" name="DEC" ucd="POS_EQ_DEC_MAIN"/>
+   <FIELD ID="sRa" unit="mas" datatype="int" name="sRa" ucd="ERROR"/>
+   <FIELD ID="sDec" unit="mas" datatype="int" name="sDec" ucd="ERROR"/>
+   <FIELD ID="sRaEp" unit="mas" datatype="int" name="sRaEp" ucd="ERROR"/>
+   <FIELD ID="sDeEp" unit="mas" datatype="int" name="sDeEp" ucd="ERROR"/>
+   <FIELD ID="MuRA" unit="mas/yr" datatype="double" name="MuRA" ucd="POS_EQ_PMRA"/>
+   <FIELD ID="MuDEC" unit="mas/yr" datatype="double" name="MuDEC" ucd="POS_EQ_PMDEC"/>
+   <FIELD ID="sMuRA" unit="mas/yr" datatype="double" name="sMuRA" ucd="ERROR"/>
+   <FIELD ID="sMuDE" unit="mas/yr" datatype="double" name="sMuDE" ucd="ERROR"/>
+   <FIELD ID="B1" unit="mag" datatype="double" precision="3" name="B1" ucd="PHOT_MAG"/>
+   <FIELD ID="R1" unit="mag" datatype="double" precision="3" name="R1" ucd="PHOT_MAG"/>
+   <FIELD ID="B2" unit="mag" datatype="double" precision="3" name="B2" ucd="PHOT_MAG"/>
+   <FIELD ID="R2" unit="mag" datatype="double" precision="3" name="R2" ucd="PHOT_MAG"/>
+   <FIELD ID="I2" unit="mag" datatype="double" precision="3" name="I2" ucd="PHOT_MAG"/>
+   <DATA>
+    <TABLEDATA>
+     <TR><TD> 1219-0001355</TD><TD>000.9797750</TD><TD>31.9891250</TD><TD>   64</TD><TD>  144</TD><TD>
+          79</TD><TD>  171</TD><TD>   14.0</TD><TD>   -2.0</TD><TD>    2.0</TD><TD>    4.0</TD><TD> 16.360
+      </TD><TD> 14.430</TD><TD> 16.590</TD><TD> 14.270</TD><TD> 13.890</TD></TR>
+     <TR><TD> 1219-0001358</TD><TD>000.9831972</TD><TD>31.9930000</TD><TD>   77</TD><TD>  999</TD><TD>
+          86</TD><TD> 1549</TD><TD>  -18.0</TD><TD> -722.0</TD><TD>    2.0</TD><TD>   61.0</TD><TD> 17.720
+      </TD><TD>  0.000</TD><TD> 20.790</TD><TD>  0.000</TD><TD> 18.780</TD></TR>
+     <TR><TD> 1219-0001359</TD><TD>000.9835139</TD><TD>31.9990944</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.580
+      </TD><TD> 19.450</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001360</TD><TD>000.9835972</TD><TD>31.9975389</TD><TD>  156</TD><TD>  999</TD><TD>
+         156</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.790
+      </TD><TD>  0.000</TD><TD> 21.290</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001361</TD><TD>000.9836861</TD><TD>31.9952889</TD><TD>  385</TD><TD>  244</TD><TD>
+         385</TD><TD>  244</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 21.010
+      </TD><TD> 19.670</TD><TD> 20.920</TD><TD> 19.720</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001362</TD><TD>000.9838472</TD><TD>31.9951306</TD><TD>  763</TD><TD>  275</TD><TD>
+         763</TD><TD>  275</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.630</TD><TD>  0.000</TD><TD> 19.310</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001363</TD><TD>000.9862222</TD><TD>31.9850306</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.330
+      </TD><TD> 19.710</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001370</TD><TD>000.9914639</TD><TD>31.9747778</TD><TD>  500</TD><TD>  184</TD><TD>
+         500</TD><TD>  184</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.410
+      </TD><TD> 19.650</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001371</TD><TD>000.9920833</TD><TD>31.9798639</TD><TD>   43</TD><TD>  485</TD><TD>
+          48</TD><TD>  602</TD><TD>  -16.0</TD><TD>   22.0</TD><TD>    1.0</TD><TD>   16.0</TD><TD> 19.320
+      </TD><TD> 19.740</TD><TD> 19.520</TD><TD> 18.830</TD><TD> 18.610</TD></TR>
+     <TR><TD> 1219-0001372</TD><TD>000.9925972</TD><TD>31.9751472</TD><TD>  110</TD><TD>   90</TD><TD>
+         130</TD><TD>  101</TD><TD>   16.0</TD><TD>   -4.0</TD><TD>    3.0</TD><TD>    2.0</TD><TD> 19.630
+      </TD><TD> 19.470</TD><TD> 20.260</TD><TD> 19.520</TD><TD> 18.700</TD></TR>
+     <TR><TD> 1219-0001375</TD><TD>000.9961167</TD><TD>31.9999583</TD><TD>  190</TD><TD>  222</TD><TD>
+         232</TD><TD>  268</TD><TD>  -26.0</TD><TD>   -6.0</TD><TD>    8.0</TD><TD>    9.0</TD><TD>  0.000
+      </TD><TD> 19.480</TD><TD> 21.260</TD><TD> 19.740</TD><TD> 18.370</TD></TR>
+     <TR><TD> 1219-0001380</TD><TD>000.9977556</TD><TD>31.9911417</TD><TD>  131</TD><TD>   31</TD><TD>
+         131</TD><TD>   31</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 14.180
+      </TD><TD> 12.890</TD><TD> 14.300</TD><TD> 12.800</TD><TD> 12.450</TD></TR>
+     <TR><TD> 1219-0001382</TD><TD>000.9997000</TD><TD>31.9731750</TD><TD>   56</TD><TD>   91</TD><TD>
+          56</TD><TD>   91</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.710
+      </TD><TD> 18.680</TD><TD> 20.280</TD><TD> 18.890</TD><TD> 17.990</TD></TR>
+     <TR><TD> 1219-0001383</TD><TD>000.9999083</TD><TD>31.9729750</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.110
+      </TD><TD> 19.780</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001386</TD><TD>001.0022694</TD><TD>31.9778250</TD><TD>  219</TD><TD>  169</TD><TD>
+         219</TD><TD>  169</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.690</TD><TD> 21.190</TD><TD> 19.860</TD><TD> 18.780</TD></TR>
+     <TR><TD> 1219-0001387</TD><TD>001.0034583</TD><TD>31.9834000</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.400
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD> 20.200</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001389</TD><TD>001.0042667</TD><TD>31.9738417</TD><TD>  114</TD><TD>   90</TD><TD>
+         114</TD><TD>   90</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.190
+      </TD><TD> 18.350</TD><TD> 19.320</TD><TD> 18.110</TD><TD> 17.710</TD></TR>
+     <TR><TD> 1219-0001396</TD><TD>001.0075639</TD><TD>31.9909778</TD><TD>  135</TD><TD>  169</TD><TD>
+         135</TD><TD>  169</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.440
+      </TD><TD> 19.740</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001399</TD><TD>001.0120111</TD><TD>31.9862722</TD><TD>  610</TD><TD>  999</TD><TD>
+         610</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 21.000
+      </TD><TD> 19.890</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001401</TD><TD>001.0148750</TD><TD>31.9778667</TD><TD>  999</TD><TD>  404</TD><TD>
+         999</TD><TD>  404</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.820</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 17.070</TD></TR>
+     <TR><TD> 1219-0001415</TD><TD>001.0231444</TD><TD>31.9844556</TD><TD>  258</TD><TD>  999</TD><TD>
+         258</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.490
+      </TD><TD> 19.820</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001416</TD><TD>001.0242917</TD><TD>31.9791222</TD><TD>  323</TD><TD>  461</TD><TD>
+         323</TD><TD>  461</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.600
+      </TD><TD>  0.000</TD><TD> 20.400</TD><TD> 19.730</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001417</TD><TD>001.0243500</TD><TD>31.9892583</TD><TD>  110</TD><TD>  115</TD><TD>
+         110</TD><TD>  115</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.100
+      </TD><TD> 19.400</TD><TD> 20.660</TD><TD> 19.430</TD><TD> 18.580</TD></TR>
+     <TR><TD> 1219-0001422</TD><TD>001.0277333</TD><TD>31.9946972</TD><TD>  423</TD><TD>  534</TD><TD>
+         423</TD><TD>  534</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.640</TD><TD> 21.290</TD><TD> 19.510</TD><TD> 17.930</TD></TR>
+     <TR><TD> 1219-0001423</TD><TD>001.0280333</TD><TD>31.9941278</TD><TD>   64</TD><TD>   87</TD><TD>
+          75</TD><TD>  106</TD><TD>   24.0</TD><TD>  -14.0</TD><TD>    2.0</TD><TD>    3.0</TD><TD>  0.000
+      </TD><TD> 19.620</TD><TD>  0.000</TD><TD> 19.590</TD><TD> 18.220</TD></TR>
+     <TR><TD> 1219-0001424</TD><TD>001.0301806</TD><TD>31.9780389</TD><TD>   26</TD><TD>  143</TD><TD>
+          26</TD><TD>  170</TD><TD>    2.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    4.0</TD><TD> 16.520
+      </TD><TD> 15.670</TD><TD> 17.020</TD><TD> 15.360</TD><TD> 15.310</TD></TR>
+     <TR><TD> 1219-0001425</TD><TD>001.0312472</TD><TD>31.9860778</TD><TD>  640</TD><TD>  160</TD><TD>
+         640</TD><TD>  160</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.570
+      </TD><TD>  0.000</TD><TD> 21.280</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001428</TD><TD>001.0328000</TD><TD>31.9789583</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.830</TD><TD>  0.000</TD><TD> 20.010</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001449</TD><TD>001.0489111</TD><TD>31.9796000</TD><TD>  846</TD><TD>  165</TD><TD>
+         846</TD><TD>  165</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.200
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD> 17.560</TD><TD> 17.670</TD></TR>
+     <TR><TD> 1219-0001453</TD><TD>001.0509889</TD><TD>31.9965056</TD><TD>   89</TD><TD>   58</TD><TD>
+          89</TD><TD>   58</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.530
+      </TD><TD> 19.330</TD><TD> 19.900</TD><TD> 18.790</TD><TD> 18.120</TD></TR>
+     <TR><TD> 1219-0001458</TD><TD>001.0536361</TD><TD>31.9866444</TD><TD>  551</TD><TD>  683</TD><TD>
+         551</TD><TD>  683</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.670
+      </TD><TD> 19.510</TD><TD> 20.600</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001459</TD><TD>001.0537278</TD><TD>31.9857972</TD><TD>  449</TD><TD>  230</TD><TD>
+         449</TD><TD>  230</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.480</TD><TD> 20.230</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001460</TD><TD>001.0538056</TD><TD>31.9839667</TD><TD>  228</TD><TD>  393</TD><TD>
+         228</TD><TD>  393</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.300
+      </TD><TD>  0.000</TD><TD> 19.990</TD><TD> 19.470</TD><TD> 18.720</TD></TR>
+     <TR><TD> 1219-0001462</TD><TD>001.0538833</TD><TD>31.9851500</TD><TD>   36</TD><TD>  324</TD><TD>
+          42</TD><TD>  400</TD><TD>   12.0</TD><TD>  -80.0</TD><TD>    1.0</TD><TD>   11.0</TD><TD>  0.000
+      </TD><TD> 19.400</TD><TD> 20.680</TD><TD> 20.160</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001468</TD><TD>001.0574972</TD><TD>31.9981500</TD><TD>    8</TD><TD>  531</TD><TD>
+           8</TD><TD>  660</TD><TD>   34.0</TD><TD>  -16.0</TD><TD>    0.0</TD><TD>   19.0</TD><TD>  0.000
+      </TD><TD> 19.460</TD><TD> 21.290</TD><TD> 20.190</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1219-0001473</TD><TD>001.0611528</TD><TD>31.9936444</TD><TD>  181</TD><TD>   79</TD><TD>
+         215</TD><TD>   93</TD><TD>  -22.0</TD><TD>    4.0</TD><TD>    7.0</TD><TD>    3.0</TD><TD>  0.000
+      </TD><TD> 19.890</TD><TD> 21.290</TD><TD> 19.890</TD><TD> 18.780</TD></TR>
+     <TR><TD> 1219-0001477</TD><TD>001.0658222</TD><TD>31.9982194</TD><TD>  109</TD><TD>   59</TD><TD>
+         109</TD><TD>   59</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.150
+      </TD><TD> 19.590</TD><TD> 20.690</TD><TD> 19.560</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001263</TD><TD>000.9582028</TD><TD>32.0307139</TD><TD>   22</TD><TD>   58</TD><TD>
+          22</TD><TD>   62</TD><TD>   -2.0</TD><TD>    8.0</TD><TD>    0.0</TD><TD>    1.0</TD><TD> 15.880
+      </TD><TD> 14.890</TD><TD> 16.390</TD><TD> 14.740</TD><TD> 14.780</TD></TR>
+     <TR><TD> 1220-0001264</TD><TD>000.9582167</TD><TD>32.0280028</TD><TD>  136</TD><TD>  223</TD><TD>
+         169</TD><TD>  274</TD><TD>   12.0</TD><TD>   -6.0</TD><TD>    5.0</TD><TD>    8.0</TD><TD>  0.000
+      </TD><TD> 19.600</TD><TD>  0.000</TD><TD> 20.100</TD><TD> 18.250</TD></TR>
+     <TR><TD> 1220-0001268</TD><TD>000.9613972</TD><TD>32.0068056</TD><TD>   19</TD><TD>  109</TD><TD>
+          19</TD><TD>  129</TD><TD>   14.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    3.0</TD><TD> 19.820
+      </TD><TD> 18.250</TD><TD> 19.750</TD><TD> 17.790</TD><TD> 16.770</TD></TR>
+     <TR><TD> 1220-0001270</TD><TD>000.9641278</TD><TD>32.0446750</TD><TD>   51</TD><TD>   75</TD><TD>
+          56</TD><TD>   88</TD><TD>    2.0</TD><TD>    6.0</TD><TD>    1.0</TD><TD>    2.0</TD><TD> 16.720
+      </TD><TD> 15.690</TD><TD> 17.260</TD><TD> 15.570</TD><TD> 15.570</TD></TR>
+     <TR><TD> 1220-0001271</TD><TD>000.9641722</TD><TD>32.0152389</TD><TD>  999</TD><TD>  490</TD><TD>
+         999</TD><TD>  490</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 17.960</TD><TD> 21.280</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001273</TD><TD>000.9659778</TD><TD>32.0235694</TD><TD>  262</TD><TD>  103</TD><TD>
+         262</TD><TD>  103</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD>  0.000</TD><TD> 20.890</TD><TD> 19.710</TD><TD> 18.370</TD></TR>
+     <TR><TD> 1220-0001274</TD><TD>000.9674611</TD><TD>32.0099861</TD><TD>  999</TD><TD>  275</TD><TD>
+         999</TD><TD>  275</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.060
+      </TD><TD>  0.000</TD><TD> 21.230</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001275</TD><TD>000.9684972</TD><TD>32.0099139</TD><TD>   97</TD><TD>  508</TD><TD>
+         115</TD><TD>  629</TD><TD> -248.0</TD><TD>  -20.0</TD><TD>    3.0</TD><TD>   18.0</TD><TD> 17.850
+      </TD><TD>  0.000</TD><TD> 20.810</TD><TD> 19.040</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001276</TD><TD>000.9691500</TD><TD>32.0189389</TD><TD>  611</TD><TD>  101</TD><TD>
+         814</TD><TD>  121</TD><TD>   66.0</TD><TD>   36.0</TD><TD>   16.0</TD><TD>    2.0</TD><TD> 19.010
+      </TD><TD> 19.530</TD><TD>  0.000</TD><TD> 19.540</TD><TD>  0.000</TD></TR>
+     <TR><TD> 2263-00189-1</TD><TD>000.9691778</TD><TD>32.0153444</TD><TD>    0</TD><TD>    0</TD><TD>
+           0</TD><TD>    0</TD><TD>   52.0</TD><TD>   -4.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 12.190
+      </TD><TD> 10.920</TD><TD> 11.760</TD><TD> 10.880</TD><TD> 10.520</TD></TR>
+     <TR><TD> 1220-0001279</TD><TD>000.9725278</TD><TD>32.0100000</TD><TD>  131</TD><TD>   69</TD><TD>
+         131</TD><TD>   69</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.040</TD><TD>  0.000</TD><TD> 19.440</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001280</TD><TD>000.9741778</TD><TD>32.0050889</TD><TD>  999</TD><TD>   32</TD><TD>
+        2014</TD><TD>   32</TD><TD>   56.0</TD><TD> -388.0</TD><TD>   53.0</TD><TD>    0.0</TD><TD> 19.430
+      </TD><TD> 17.980</TD><TD> 19.590</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001282</TD><TD>000.9745000</TD><TD>32.0100222</TD><TD>  678</TD><TD>  184</TD><TD>
+         678</TD><TD>  184</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.800
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD> 18.660</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001283</TD><TD>000.9758194</TD><TD>32.0099639</TD><TD>  720</TD><TD>  429</TD><TD>
+         720</TD><TD>  429</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.120
+      </TD><TD> 18.870</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001284</TD><TD>000.9762083</TD><TD>32.0099389</TD><TD>  269</TD><TD>  315</TD><TD>
+         269</TD><TD>  315</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 17.750
+      </TD><TD> 18.830</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 15.680</TD></TR>
+     <TR><TD> 1220-0001285</TD><TD>000.9770667</TD><TD>32.0097556</TD><TD>   85</TD><TD>  145</TD><TD>
+         107</TD><TD>  174</TD><TD>   14.0</TD><TD>  -26.0</TD><TD>    2.0</TD><TD>    3.0</TD><TD> 17.400
+      </TD><TD> 16.640</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 15.330</TD></TR>
+     <TR><TD> 1220-0001286</TD><TD>000.9782556</TD><TD>32.0444417</TD><TD>   33</TD><TD>  614</TD><TD>
+          33</TD><TD>  614</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.420
+      </TD><TD>  0.000</TD><TD> 21.140</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001287</TD><TD>000.9782778</TD><TD>32.0584167</TD><TD>  254</TD><TD>  304</TD><TD>
+         254</TD><TD>  304</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.960
+      </TD><TD> 19.390</TD><TD> 21.020</TD><TD> 19.490</TD><TD> 18.400</TD></TR>
+     <TR><TD> 1220-0001288</TD><TD>000.9790417</TD><TD>32.0098250</TD><TD>  144</TD><TD>  405</TD><TD>
+         144</TD><TD>  405</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 14.290
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 13.450</TD></TR>
+     <TR><TD> 1220-0001289</TD><TD>000.9792528</TD><TD>32.0157278</TD><TD>   35</TD><TD>  999</TD><TD>
+          35</TD><TD> 3074</TD><TD> -292.0</TD><TD>  -30.0</TD><TD>    0.0</TD><TD>   90.0</TD><TD> 18.680
+      </TD><TD> 18.070</TD><TD> 17.420</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001290</TD><TD>000.9792528</TD><TD>32.0166361</TD><TD>  301</TD><TD>  181</TD><TD>
+         397</TD><TD>  222</TD><TD>   60.0</TD><TD>  526.0</TD><TD>    8.0</TD><TD>    4.0</TD><TD> 16.230
+      </TD><TD> 15.300</TD><TD> 17.550</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001292</TD><TD>000.9802417</TD><TD>32.0136778</TD><TD>  876</TD><TD>  198</TD><TD>
+        1149</TD><TD>  256</TD><TD>  230.0</TD><TD>  292.0</TD><TD>   23.0</TD><TD>    5.0</TD><TD> 17.730
+      </TD><TD> 16.910</TD><TD> 11.460</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001293</TD><TD>000.9802889</TD><TD>32.0373500</TD><TD>   80</TD><TD>   57</TD><TD>
+          80</TD><TD>   57</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.290
+      </TD><TD> 18.840</TD><TD> 19.280</TD><TD> 18.740</TD><TD> 18.450</TD></TR>
+     <TR><TD> 1220-0001295</TD><TD>000.9809083</TD><TD>32.0300028</TD><TD>   87</TD><TD>   36</TD><TD>
+          99</TD><TD>   43</TD><TD>    2.0</TD><TD>   -6.0</TD><TD>    2.0</TD><TD>    1.0</TD><TD> 18.070
+      </TD><TD> 16.340</TD><TD> 18.120</TD><TD> 16.320</TD><TD> 16.080</TD></TR>
+     <TR><TD> 1220-0001296</TD><TD>000.9813250</TD><TD>32.0577083</TD><TD>   86</TD><TD>  100</TD><TD>
+          86</TD><TD>  100</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.380
+      </TD><TD> 17.570</TD><TD> 18.550</TD><TD> 18.150</TD><TD> 17.340</TD></TR>
+     <TR><TD> 1220-0001299</TD><TD>000.9822972</TD><TD>32.0460361</TD><TD>  174</TD><TD>   72</TD><TD>
+         174</TD><TD>   72</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.070
+      </TD><TD> 19.780</TD><TD> 20.780</TD><TD> 19.490</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001300</TD><TD>000.9832833</TD><TD>32.0193222</TD><TD>   52</TD><TD>  999</TD><TD>
+          56</TD><TD> 1313</TD><TD>  -26.0</TD><TD>  -36.0</TD><TD>    1.0</TD><TD>   40.0</TD><TD> 19.100
+      </TD><TD>  0.000</TD><TD> 19.530</TD><TD> 19.080</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001301</TD><TD>000.9833167</TD><TD>32.0153944</TD><TD>  154</TD><TD>  999</TD><TD>
+         186</TD><TD> 1475</TD><TD>  -18.0</TD><TD>   24.0</TD><TD>    3.0</TD><TD>   31.0</TD><TD> 16.510
+      </TD><TD> 16.630</TD><TD>  0.000</TD><TD> 16.610</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001302</TD><TD>000.9834167</TD><TD>32.0012389</TD><TD>  445</TD><TD>  537</TD><TD>
+         561</TD><TD>  682</TD><TD>  -42.0</TD><TD>  -44.0</TD><TD>   13.0</TD><TD>   16.0</TD><TD> 19.320
+      </TD><TD> 18.790</TD><TD>  0.000</TD><TD> 18.010</TD><TD> 18.130</TD></TR>
+     <TR><TD> 1220-0001303</TD><TD>000.9834250</TD><TD>32.0040250</TD><TD>  169</TD><TD>  418</TD><TD>
+         169</TD><TD>  418</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 17.990
+      </TD><TD> 18.330</TD><TD>  0.000</TD><TD> 17.910</TD><TD> 18.530</TD></TR>
+     <TR><TD> 1220-0001304</TD><TD>000.9834278</TD><TD>32.0046472</TD><TD>   76</TD><TD>  566</TD><TD>
+          76</TD><TD>  566</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 18.280</TD><TD>  0.000</TD><TD> 17.300</TD><TD> 18.310</TD></TR>
+     <TR><TD> 1220-0001305</TD><TD>000.9834306</TD><TD>32.0030056</TD><TD>  233</TD><TD>   55</TD><TD>
+         233</TD><TD>   55</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 17.380
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 18.670</TD></TR>
+     <TR><TD> 2263-01470-1</TD><TD>000.9834583</TD><TD>32.0098750</TD><TD>    0</TD><TD>    0</TD><TD>
+           0</TD><TD>    0</TD><TD>  -12.0</TD><TD>  -16.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  9.300
+      </TD><TD>  8.710</TD><TD>  9.120</TD><TD>  8.680</TD><TD>  8.500</TD></TR>
+     <TR><TD> 1220-0001307</TD><TD>000.9834889</TD><TD>32.0170417</TD><TD>  152</TD><TD>  475</TD><TD>
+         152</TD><TD>  475</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.730
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD> 19.120</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001308</TD><TD>000.9835028</TD><TD>32.0188111</TD><TD>  182</TD><TD>  275</TD><TD>
+         182</TD><TD>  275</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.810
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 18.640</TD></TR>
+     <TR><TD> 1220-0001309</TD><TD>000.9835111</TD><TD>32.0003833</TD><TD>  147</TD><TD>  578</TD><TD>
+         147</TD><TD>  578</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.440
+      </TD><TD> 18.920</TD><TD> 19.930</TD><TD>  0.000</TD><TD> 18.330</TD></TR>
+     <TR><TD> 1220-0001310</TD><TD>000.9835306</TD><TD>32.0203083</TD><TD>  539</TD><TD>  885</TD><TD>
+         539</TD><TD>  885</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.950
+      </TD><TD>  0.000</TD><TD> 20.440</TD><TD> 19.650</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001311</TD><TD>000.9835472</TD><TD>32.0185667</TD><TD>  228</TD><TD>  168</TD><TD>
+         228</TD><TD>  168</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.330
+      </TD><TD>  0.000</TD><TD> 19.910</TD><TD> 19.010</TD><TD> 18.350</TD></TR>
+     <TR><TD> 1220-0001312</TD><TD>000.9836028</TD><TD>32.0216028</TD><TD>  297</TD><TD>  999</TD><TD>
+         297</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.800
+      </TD><TD>  0.000</TD><TD> 20.490</TD><TD> 19.740</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001313</TD><TD>000.9837056</TD><TD>32.0009694</TD><TD>  460</TD><TD>  864</TD><TD>
+         460</TD><TD>  864</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 18.280</TD><TD>  0.000</TD><TD> 17.760</TD><TD> 17.620</TD></TR>
+     <TR><TD> 1220-0001314</TD><TD>000.9842028</TD><TD>32.0609500</TD><TD>  163</TD><TD>   57</TD><TD>
+         163</TD><TD>   57</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.910</TD><TD>  0.000</TD><TD> 19.450</TD><TD> 18.660</TD></TR>
+     <TR><TD> 1220-0001318</TD><TD>000.9872861</TD><TD>32.0014028</TD><TD>  999</TD><TD>  999</TD><TD>
+        1678</TD><TD> 1445</TD><TD>  248.0</TD><TD>  178.0</TD><TD>   40.0</TD><TD>   31.0</TD><TD> 19.520
+      </TD><TD> 19.730</TD><TD> 20.020</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001319</TD><TD>000.9889611</TD><TD>32.0502806</TD><TD>  122</TD><TD>  160</TD><TD>
+         122</TD><TD>  160</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.380
+      </TD><TD> 19.600</TD><TD> 20.480</TD><TD> 19.070</TD><TD> 18.550</TD></TR>
+     <TR><TD> 1220-0001320</TD><TD>000.9892306</TD><TD>32.0100611</TD><TD>  230</TD><TD>  269</TD><TD>
+         230</TD><TD>  269</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 17.100
+      </TD><TD> 15.010</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 16.310</TD></TR>
+     <TR><TD> 1220-0001321</TD><TD>000.9897000</TD><TD>32.0097639</TD><TD>  830</TD><TD>  166</TD><TD>
+        1111</TD><TD>  214</TD><TD>  -16.0</TD><TD>  -44.0</TD><TD>   22.0</TD><TD>    4.0</TD><TD> 18.120
+      </TD><TD> 17.750</TD><TD>  0.000</TD><TD> 15.020</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001322</TD><TD>000.9897972</TD><TD>32.0136778</TD><TD>  584</TD><TD>  999</TD><TD>
+         772</TD><TD> 3097</TD><TD>  388.0</TD><TD> -238.0</TD><TD>   15.0</TD><TD>   87.0</TD><TD> 18.910
+      </TD><TD> 18.070</TD><TD> 17.780</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001323</TD><TD>000.9901167</TD><TD>32.0044639</TD><TD>  962</TD><TD>  999</TD><TD>
+         962</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.090
+      </TD><TD>  0.000</TD><TD> 17.920</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001324</TD><TD>000.9908194</TD><TD>32.0026139</TD><TD>  364</TD><TD>  999</TD><TD>
+         470</TD><TD> 1762</TD><TD>  480.0</TD><TD> -112.0</TD><TD>    9.0</TD><TD>   44.0</TD><TD> 16.950
+      </TD><TD> 17.860</TD><TD> 19.040</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001325</TD><TD>000.9908639</TD><TD>32.0240778</TD><TD>   55</TD><TD>   36</TD><TD>
+          60</TD><TD>   43</TD><TD>    8.0</TD><TD>    6.0</TD><TD>    1.0</TD><TD>    1.0</TD><TD> 16.730
+      </TD><TD> 16.270</TD><TD> 17.160</TD><TD> 15.850</TD><TD> 15.990</TD></TR>
+     <TR><TD> 1220-0001326</TD><TD>000.9908944</TD><TD>32.0420667</TD><TD>  999</TD><TD>  626</TD><TD>
+        1331</TD><TD>  760</TD><TD>  304.0</TD><TD>   18.0</TD><TD>   53.0</TD><TD>   26.0</TD><TD> 20.770
+      </TD><TD>  0.000</TD><TD> 21.000</TD><TD> 19.440</TD><TD> 18.620</TD></TR>
+     <TR><TD> 1220-0001327</TD><TD>000.9909639</TD><TD>32.0513250</TD><TD>  999</TD><TD>  631</TD><TD>
+        1351</TD><TD>  830</TD><TD>  114.0</TD><TD>   88.0</TD><TD>   27.0</TD><TD>   16.0</TD><TD> 19.970
+      </TD><TD> 19.440</TD><TD> 20.970</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001328</TD><TD>000.9911583</TD><TD>32.0097833</TD><TD>  471</TD><TD>  188</TD><TD>
+         615</TD><TD>  230</TD><TD>   -8.0</TD><TD>  -34.0</TD><TD>   12.0</TD><TD>    4.0</TD><TD> 18.040
+      </TD><TD> 17.960</TD><TD> 14.120</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001329</TD><TD>000.9918222</TD><TD>32.0099750</TD><TD>  561</TD><TD>  445</TD><TD>
+         561</TD><TD>  445</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.670
+      </TD><TD> 19.440</TD><TD>  0.000</TD><TD> 17.310</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001330</TD><TD>000.9923583</TD><TD>32.0100667</TD><TD>  400</TD><TD>  465</TD><TD>
+         400</TD><TD>  465</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.270
+      </TD><TD> 18.920</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 18.100</TD></TR>
+     <TR><TD> 1220-0001332</TD><TD>000.9932833</TD><TD>32.0598972</TD><TD>  124</TD><TD>  123</TD><TD>
+         124</TD><TD>  123</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.030</TD><TD> 20.580</TD><TD> 18.440</TD><TD> 18.130</TD></TR>
+     <TR><TD> 1220-0001334</TD><TD>000.9953722</TD><TD>32.0099194</TD><TD>  144</TD><TD>  949</TD><TD>
+         144</TD><TD>  949</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.840
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD> 18.340</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001336</TD><TD>000.9969417</TD><TD>32.0297806</TD><TD>  106</TD><TD>   49</TD><TD>
+         106</TD><TD>   49</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.120
+      </TD><TD> 17.140</TD><TD> 18.190</TD><TD> 16.650</TD><TD> 16.980</TD></TR>
+     <TR><TD> 1220-0001337</TD><TD>000.9970861</TD><TD>32.0101306</TD><TD>  292</TD><TD>  774</TD><TD>
+         292</TD><TD>  774</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.000
+      </TD><TD>  0.000</TD><TD> 20.160</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001338</TD><TD>000.9976694</TD><TD>32.0028583</TD><TD>   41</TD><TD>   62</TD><TD>
+          41</TD><TD>   62</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.530
+      </TD><TD> 17.990</TD><TD> 18.650</TD><TD> 17.470</TD><TD> 17.390</TD></TR>
+     <TR><TD> 1220-0001340</TD><TD>000.9998194</TD><TD>32.0441694</TD><TD>  551</TD><TD>  999</TD><TD>
+         551</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.890
+      </TD><TD>  0.000</TD><TD> 21.270</TD><TD>  0.000</TD><TD> 18.240</TD></TR>
+     <TR><TD> 1220-0001341</TD><TD>001.0000861</TD><TD>32.0682611</TD><TD>   74</TD><TD>  132</TD><TD>
+          87</TD><TD>  160</TD><TD>   34.0</TD><TD>  -28.0</TD><TD>    2.0</TD><TD>    4.0</TD><TD> 21.090
+      </TD><TD> 18.870</TD><TD> 20.900</TD><TD> 18.920</TD><TD> 16.960</TD></TR>
+     <TR><TD> 1220-0001342</TD><TD>001.0005167</TD><TD>32.0294444</TD><TD>  999</TD><TD>  999</TD><TD>
+        1895</TD><TD> 2695</TD><TD>  136.0</TD><TD>  442.0</TD><TD>   83.0</TD><TD>  129.0</TD><TD>  0.000
+      </TD><TD> 19.460</TD><TD> 21.260</TD><TD>  0.000</TD><TD> 18.770</TD></TR>
+     <TR><TD> 1220-0001344</TD><TD>001.0033333</TD><TD>32.0646778</TD><TD>   29</TD><TD>  675</TD><TD>
+          36</TD><TD>  849</TD><TD>   20.0</TD><TD>  -16.0</TD><TD>    1.0</TD><TD>   25.0</TD><TD> 20.340
+      </TD><TD>  0.000</TD><TD> 20.460</TD><TD> 19.950</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001345</TD><TD>001.0033361</TD><TD>32.0347722</TD><TD>  101</TD><TD>  102</TD><TD>
+         101</TD><TD>  102</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.340
+      </TD><TD> 19.570</TD><TD> 19.980</TD><TD> 19.330</TD><TD> 18.220</TD></TR>
+     <TR><TD> 1220-0001346</TD><TD>001.0043972</TD><TD>32.0082917</TD><TD>  160</TD><TD>   77</TD><TD>
+         188</TD><TD>   92</TD><TD>    6.0</TD><TD>    8.0</TD><TD>    6.0</TD><TD>    3.0</TD><TD>  0.000
+      </TD><TD> 19.480</TD><TD> 21.170</TD><TD> 19.230</TD><TD> 18.330</TD></TR>
+     <TR><TD> 1220-0001348</TD><TD>001.0048278</TD><TD>32.0244611</TD><TD>   75</TD><TD>   72</TD><TD>
+          75</TD><TD>   72</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 16.540
+      </TD><TD> 15.470</TD><TD> 16.740</TD><TD> 15.200</TD><TD> 14.970</TD></TR>
+     <TR><TD> 1220-0001351</TD><TD>001.0072333</TD><TD>32.0380333</TD><TD>   51</TD><TD>  120</TD><TD>
+          56</TD><TD>  139</TD><TD>   -6.0</TD><TD>   -6.0</TD><TD>    1.0</TD><TD>    3.0</TD><TD> 18.500
+      </TD><TD> 18.170</TD><TD> 18.690</TD><TD> 17.960</TD><TD> 17.730</TD></TR>
+     <TR><TD> 1220-0001352</TD><TD>001.0074639</TD><TD>32.0549417</TD><TD>  254</TD><TD>   60</TD><TD>
+         303</TD><TD>   69</TD><TD>   -2.0</TD><TD>  -10.0</TD><TD>   10.0</TD><TD>    2.0</TD><TD>  0.000
+      </TD><TD> 18.600</TD><TD> 20.640</TD><TD> 18.190</TD><TD> 17.620</TD></TR>
+     <TR><TD> 1220-0001353</TD><TD>001.0075333</TD><TD>32.0214389</TD><TD>   28</TD><TD>   50</TD><TD>
+          28</TD><TD>   50</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 17.400
+      </TD><TD> 16.600</TD><TD> 17.690</TD><TD> 16.090</TD><TD> 16.030</TD></TR>
+     <TR><TD> 1220-0001355</TD><TD>001.0076917</TD><TD>32.0647556</TD><TD>   24</TD><TD>  199</TD><TD>
+          24</TD><TD>  243</TD><TD>   -6.0</TD><TD>   -8.0</TD><TD>    0.0</TD><TD>    6.0</TD><TD> 20.520
+      </TD><TD> 18.920</TD><TD> 19.300</TD><TD> 18.490</TD><TD> 17.710</TD></TR>
+     <TR><TD> 1220-0001356</TD><TD>001.0101917</TD><TD>32.0517750</TD><TD>  157</TD><TD>  309</TD><TD>
+         157</TD><TD>  309</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.290</TD><TD> 20.980</TD><TD> 19.970</TD><TD> 18.330</TD></TR>
+     <TR><TD> 1220-0001357</TD><TD>001.0116306</TD><TD>32.0383861</TD><TD>  276</TD><TD>  187</TD><TD>
+         276</TD><TD>  187</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.600</TD><TD> 21.110</TD><TD> 19.540</TD><TD> 18.750</TD></TR>
+     <TR><TD> 1220-0001358</TD><TD>001.0124056</TD><TD>32.0091417</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD>  0.000</TD><TD> 21.220</TD><TD> 20.150</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001359</TD><TD>001.0129667</TD><TD>32.0523639</TD><TD>  765</TD><TD>  349</TD><TD>
+         947</TD><TD>  428</TD><TD>  320.0</TD><TD> -164.0</TD><TD>   27.0</TD><TD>   12.0</TD><TD>  0.000
+      </TD><TD> 19.420</TD><TD>  0.000</TD><TD> 20.050</TD><TD> 18.780</TD></TR>
+     <TR><TD> 1220-0001361</TD><TD>001.0134000</TD><TD>32.0168889</TD><TD>  153</TD><TD>   16</TD><TD>
+         183</TD><TD>   16</TD><TD>   10.0</TD><TD>  -12.0</TD><TD>    6.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.850</TD><TD> 21.150</TD><TD> 19.440</TD><TD> 18.380</TD></TR>
+     <TR><TD> 1220-0001362</TD><TD>001.0140500</TD><TD>32.0192778</TD><TD>   45</TD><TD>   74</TD><TD>
+          45</TD><TD>   74</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 17.000
+      </TD><TD> 16.680</TD><TD> 17.340</TD><TD> 16.090</TD><TD> 16.840</TD></TR>
+     <TR><TD> 1220-0001365</TD><TD>001.0173194</TD><TD>32.0409972</TD><TD>   46</TD><TD>   88</TD><TD>
+          46</TD><TD>   88</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.780
+      </TD><TD> 18.350</TD><TD> 20.080</TD><TD> 17.910</TD><TD> 17.150</TD></TR>
+     <TR><TD> 1220-0001366</TD><TD>001.0217611</TD><TD>32.0471278</TD><TD>   64</TD><TD>   60</TD><TD>
+          79</TD><TD>   64</TD><TD>   -8.0</TD><TD>   -4.0</TD><TD>    2.0</TD><TD>    1.0</TD><TD> 14.810
+      </TD><TD> 13.730</TD><TD> 14.990</TD><TD> 13.680</TD><TD> 13.350</TD></TR>
+     <TR><TD> 1220-0001371</TD><TD>001.0271222</TD><TD>32.0203000</TD><TD>   60</TD><TD>  123</TD><TD>
+          60</TD><TD>  123</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.790</TD><TD> 21.220</TD><TD> 19.640</TD><TD> 18.650</TD></TR>
+     <TR><TD> 1220-0001372</TD><TD>001.0278111</TD><TD>32.0016000</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.490</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 18.620</TD></TR>
+     <TR><TD> 1220-0001373</TD><TD>001.0298028</TD><TD>32.0620972</TD><TD>   51</TD><TD>  115</TD><TD>
+          56</TD><TD>  134</TD><TD>   -8.0</TD><TD>    8.0</TD><TD>    1.0</TD><TD>    3.0</TD><TD> 20.140
+      </TD><TD> 18.400</TD><TD> 19.820</TD><TD> 18.430</TD><TD> 17.890</TD></TR>
+     <TR><TD> 1220-0001374</TD><TD>001.0307611</TD><TD>32.0635056</TD><TD>   91</TD><TD>  134</TD><TD>
+          91</TD><TD>  134</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.680
+      </TD><TD> 18.900</TD><TD> 20.090</TD><TD> 18.670</TD><TD> 18.520</TD></TR>
+     <TR><TD> 1220-0001375</TD><TD>001.0315250</TD><TD>32.0480111</TD><TD>   93</TD><TD>  148</TD><TD>
+         110</TD><TD>  177</TD><TD>  -40.0</TD><TD>   44.0</TD><TD>    3.0</TD><TD>    5.0</TD><TD>  0.000
+      </TD><TD> 19.210</TD><TD> 20.740</TD><TD>  0.000</TD><TD> 18.680</TD></TR>
+     <TR><TD> 1220-0001376</TD><TD>001.0315278</TD><TD>32.0669306</TD><TD>   43</TD><TD>   68</TD><TD>
+          43</TD><TD>   68</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.320</TD><TD> 20.890</TD><TD> 18.820</TD><TD> 17.910</TD></TR>
+     <TR><TD> 1220-0001377</TD><TD>001.0316167</TD><TD>32.0369500</TD><TD>   19</TD><TD>   62</TD><TD>
+          19</TD><TD>   77</TD><TD>    0.0</TD><TD>    6.0</TD><TD>    0.0</TD><TD>    2.0</TD><TD> 20.390
+      </TD><TD> 19.600</TD><TD> 20.860</TD><TD> 19.190</TD><TD> 18.310</TD></TR>
+     <TR><TD> 1220-0001378</TD><TD>001.0321444</TD><TD>32.0453000</TD><TD>  999</TD><TD>  360</TD><TD>
+         999</TD><TD>  360</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.840</TD><TD> 21.280</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001379</TD><TD>001.0323361</TD><TD>32.0537056</TD><TD>  139</TD><TD>  340</TD><TD>
+         139</TD><TD>  340</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD>  0.000</TD><TD> 21.180</TD><TD> 19.570</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001381</TD><TD>001.0329250</TD><TD>32.0452500</TD><TD>   55</TD><TD>  199</TD><TD>
+          55</TD><TD>  199</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.630</TD><TD> 20.680</TD><TD> 19.100</TD><TD> 18.700</TD></TR>
+     <TR><TD> 1220-0001382</TD><TD>001.0347056</TD><TD>32.0407083</TD><TD>  480</TD><TD>    5</TD><TD>
+         586</TD><TD>    5</TD><TD>   24.0</TD><TD>  -12.0</TD><TD>   18.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.580</TD><TD> 20.840</TD><TD>  0.000</TD><TD> 18.550</TD></TR>
+     <TR><TD> 1220-0001383</TD><TD>001.0355944</TD><TD>32.0518250</TD><TD>  162</TD><TD>   42</TD><TD>
+         190</TD><TD>   45</TD><TD>   16.0</TD><TD>    4.0</TD><TD>    6.0</TD><TD>    1.0</TD><TD>  0.000
+      </TD><TD> 19.430</TD><TD> 21.140</TD><TD> 19.670</TD><TD> 18.330</TD></TR>
+     <TR><TD> 1220-0001384</TD><TD>001.0380083</TD><TD>32.0632417</TD><TD>  156</TD><TD>  999</TD><TD>
+         156</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 18.890</TD><TD> 21.270</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001385</TD><TD>001.0381083</TD><TD>32.0638417</TD><TD>   93</TD><TD>  114</TD><TD>
+         116</TD><TD>  134</TD><TD>    8.0</TD><TD>   -4.0</TD><TD>    3.0</TD><TD>    3.0</TD><TD> 18.970
+      </TD><TD> 19.580</TD><TD> 19.970</TD><TD> 19.140</TD><TD> 18.640</TD></TR>
+     <TR><TD> 1220-0001386</TD><TD>001.0384139</TD><TD>32.0444722</TD><TD>  120</TD><TD>  108</TD><TD>
+         120</TD><TD>  108</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.450
+      </TD><TD> 17.560</TD><TD> 19.130</TD><TD> 17.530</TD><TD> 17.350</TD></TR>
+     <TR><TD> 1220-0001387</TD><TD>001.0386028</TD><TD>32.0443667</TD><TD>  999</TD><TD>  490</TD><TD>
+         999</TD><TD>  490</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.310
+      </TD><TD> 19.730</TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001390</TD><TD>001.0406778</TD><TD>32.0024500</TD><TD>  168</TD><TD>  201</TD><TD>
+         168</TD><TD>  201</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.520</TD><TD> 20.780</TD><TD> 19.240</TD><TD> 18.650</TD></TR>
+     <TR><TD> 1220-0001391</TD><TD>001.0409917</TD><TD>32.0021889</TD><TD>   33</TD><TD>    4</TD><TD>
+          33</TD><TD>    4</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.780</TD><TD> 20.860</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001394</TD><TD>001.0443000</TD><TD>32.0622722</TD><TD>  136</TD><TD>   86</TD><TD>
+         136</TD><TD>   86</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.910
+      </TD><TD> 19.810</TD><TD> 19.290</TD><TD> 18.920</TD><TD> 18.220</TD></TR>
+     <TR><TD> 1220-0001395</TD><TD>001.0447417</TD><TD>32.0281583</TD><TD>   62</TD><TD>  146</TD><TD>
+          62</TD><TD>  146</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.610</TD><TD> 21.180</TD><TD> 19.740</TD><TD> 18.410</TD></TR>
+     <TR><TD> 1220-0001398</TD><TD>001.0465028</TD><TD>32.0414139</TD><TD>  115</TD><TD>  111</TD><TD>
+         115</TD><TD>  111</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.670</TD><TD> 21.160</TD><TD> 19.760</TD><TD> 18.550</TD></TR>
+     <TR><TD> 1220-0001399</TD><TD>001.0471750</TD><TD>32.0565417</TD><TD>   54</TD><TD>   73</TD><TD>
+          54</TD><TD>   73</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 18.150
+      </TD><TD> 16.800</TD><TD> 18.210</TD><TD> 16.470</TD><TD> 16.420</TD></TR>
+     <TR><TD> 1220-0001400</TD><TD>001.0476417</TD><TD>32.0485306</TD><TD>   90</TD><TD>   55</TD><TD>
+          90</TD><TD>   55</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.210
+      </TD><TD> 19.730</TD><TD> 20.850</TD><TD> 19.040</TD><TD> 18.780</TD></TR>
+     <TR><TD> 1220-0001403</TD><TD>001.0486444</TD><TD>32.0421000</TD><TD>  136</TD><TD>   70</TD><TD>
+         165</TD><TD>   84</TD><TD>   12.0</TD><TD>   -6.0</TD><TD>    4.0</TD><TD>    2.0</TD><TD> 20.690
+      </TD><TD> 18.690</TD><TD> 20.060</TD><TD> 18.210</TD><TD> 17.200</TD></TR>
+     <TR><TD> 1220-0001404</TD><TD>001.0491917</TD><TD>32.0417389</TD><TD>  239</TD><TD>  267</TD><TD>
+         239</TD><TD>  267</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 18.710</TD><TD> 20.520</TD><TD> 18.890</TD><TD> 16.990</TD></TR>
+     <TR><TD> 1220-0001405</TD><TD>001.0492500</TD><TD>32.0141417</TD><TD>  173</TD><TD>   80</TD><TD>
+         173</TD><TD>   80</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.870
+      </TD><TD> 18.490</TD><TD> 20.320</TD><TD> 18.740</TD><TD> 17.560</TD></TR>
+     <TR><TD> 1220-0001407</TD><TD>001.0509694</TD><TD>32.0157528</TD><TD>   45</TD><TD>  251</TD><TD>
+          51</TD><TD>  312</TD><TD>   -8.0</TD><TD>   -2.0</TD><TD>    1.0</TD><TD>    8.0</TD><TD> 18.840
+      </TD><TD> 18.670</TD><TD> 19.290</TD><TD> 18.460</TD><TD> 17.920</TD></TR>
+     <TR><TD> 1220-0001410</TD><TD>001.0520139</TD><TD>32.0226556</TD><TD>  114</TD><TD>  365</TD><TD>
+         139</TD><TD>  448</TD><TD>   26.0</TD><TD>   -8.0</TD><TD>    4.0</TD><TD>   13.0</TD><TD>  0.000
+      </TD><TD> 19.770</TD><TD>  0.000</TD><TD> 19.900</TD><TD> 18.590</TD></TR>
+     <TR><TD> 1220-0001411</TD><TD>001.0545750</TD><TD>32.0297111</TD><TD>  999</TD><TD>  690</TD><TD>
+         999</TD><TD>  690</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.890
+      </TD><TD>  0.000</TD><TD> 21.170</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001412</TD><TD>001.0560722</TD><TD>32.0480833</TD><TD>  610</TD><TD>  150</TD><TD>
+         610</TD><TD>  150</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.250
+      </TD><TD>  0.000</TD><TD> 20.980</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001413</TD><TD>001.0577417</TD><TD>32.0353306</TD><TD>  132</TD><TD>   34</TD><TD>
+         132</TD><TD>   34</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.970
+      </TD><TD> 19.000</TD><TD> 19.580</TD><TD> 18.430</TD><TD> 18.270</TD></TR>
+     <TR><TD> 1220-0001414</TD><TD>001.0583000</TD><TD>32.0408833</TD><TD>   40</TD><TD>   65</TD><TD>
+          40</TD><TD>   65</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.170
+      </TD><TD> 18.570</TD><TD> 19.520</TD><TD> 17.910</TD><TD> 17.310</TD></TR>
+     <TR><TD> 1220-0001415</TD><TD>001.0584889</TD><TD>32.0062333</TD><TD>  999</TD><TD>  999</TD><TD>
+         999</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.730</TD><TD>  0.000</TD><TD> 19.040</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001416</TD><TD>001.0598750</TD><TD>32.0252194</TD><TD>  107</TD><TD>  100</TD><TD>
+         107</TD><TD>  100</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 19.980
+      </TD><TD> 19.440</TD><TD> 20.190</TD><TD> 18.680</TD><TD> 18.140</TD></TR>
+     <TR><TD> 1220-0001417</TD><TD>001.0616194</TD><TD>32.0136444</TD><TD>  237</TD><TD>  390</TD><TD>
+         237</TD><TD>  390</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.630</TD><TD>  0.000</TD><TD> 19.770</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001418</TD><TD>001.0617528</TD><TD>32.0339250</TD><TD>  190</TD><TD>  999</TD><TD>
+         190</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>  0.000
+      </TD><TD> 19.480</TD><TD> 21.290</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001419</TD><TD>001.0631972</TD><TD>32.0271472</TD><TD>  999</TD><TD>  695</TD><TD>
+         999</TD><TD>  695</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 21.000
+      </TD><TD>  0.000</TD><TD> 21.280</TD><TD>  0.000</TD><TD>  0.000</TD></TR>
+     <TR><TD> 1220-0001441</TD><TD>001.0714778</TD><TD>32.0179194</TD><TD>  648</TD><TD>  999</TD><TD>
+         648</TD><TD>  999</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD>    0.0</TD><TD> 20.530
+      </TD><TD>  0.000</TD><TD>  0.000</TD><TD>  0.000</TD><TD> 18.760</TD></TR>
+    </TABLEDATA>
+   </DATA>
+  </TABLE>
+ </RESOURCE>
+</VOTABLE>
