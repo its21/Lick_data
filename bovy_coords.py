@@ -1062,8 +1062,8 @@ def get_epoch_angles(epoch=2000.0):
         dec_ngp= 27.4/180.*sc.pi
         ra_ngp= 192.25/180.*sc.pi
     else:
-        print("Only epochs 1950 and 2000 are supported")
-        print("Returning...")
+        print "Only epochs 1950 and 2000 are supported"
+        print "Returning..."
         return -1
     return (theta,dec_ngp,ra_ngp)
 

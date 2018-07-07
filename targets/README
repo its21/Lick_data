@@ -1,0 +1,7 @@
+Data files:
+apj452476t2_mrt.txt SDSS + CSS from Drake 2013a
+RRL_params_2018.txt CSS from Drake 2013a with the correct phase
+
+python files:
+CSS_paper1_new.py : saves the light curves, to use to check the light curve
+save_list_targets.py : saves a list of targets to observe - can modify! 
