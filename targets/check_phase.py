@@ -10,15 +10,13 @@ from bovy_coords import radec_to_lb
 import ephem
 from astropy.time import Time
 import sys
+import astropy.units as u
 
 def phase(time,period):
     Phased = np.modf(time/period)[0]
     return Phased
 
-
-
-def getalt(ra,dec, yr, mon, day, hr, minu, lon='-121:38:14', lat='37:20:35',
-        elev=1283):
+def getalt(ra,dec, yr, mon, day, hr, minu, lon='-121:38:14', lat='37:20:35',  elev=1283):
     #kitt peak: 31.9599° N, 111.5997° W, lon='-111:35:59', lat='31:57:12'
 
     #computes the altitude in degrees of a given object at the given utc time
@@ -27,7 +25,7 @@ def getalt(ra,dec, yr, mon, day, hr, minu, lon='-121:38:14', lat='37:20:35',
     # lon lat are in degrees and lon is positive to the East
     
     obs = ephem.Observer();
-    obs.lon = lon # longi tude 
+    obs.lon = lon # longitude 
     obs.lat = lat #latitude
     obs.elevation=elev;
     fb = ephem.FixedBody();
@@ -41,28 +39,12 @@ def getalt(ra,dec, yr, mon, day, hr, minu, lon='-121:38:14', lat='37:20:35',
     return alt
 
 from astropy.time import Time
-t = Time.now() #utc
-
+t = Time.now() +10*u.hour#utc
+cali_time = t - 7*u.hour #ok
 RA, DEC, Vmag, D, P, Amp,Red, ephemeris = np.load('targets_15_20_info.npy')
 ra = np.array(RA); dec = np.array(DEC)
-alt = getalt(ra[0], dec[0], t.datetime.year, t.datetime.month, t.datetime.day, t.datetime.hour, t.datetime.minute)
+alt = getalt(ra[0],  dec[0], t.datetime.year, t.datetime.month, t.datetime.day, t.datetime.hour, t.datetime.minute)
 airmass = 1./np.cos(np.deg2rad(90.-alt))
 print(np.round(airmass,2))
 
-#times = ['1999-01-01 00:00:00.123456789', '2010-01-01 00:00:00']
-#t = Time(times, format='iso', scale='utc')
-#t.mjd
 current_phase = np.round((phase(t.mjd-ephemeris, P)),2)
-
-
-import numpy as np
-from astropy import units as u
-from astropy.time import Time
-from astropy.coordinates import SkyCoord, EarthLocation, AltAz
-m33 = SkyCoord.from_name('M33')  
-bear_mountain = EarthLocation(lat=41.3*u.deg, lon=-74*u.deg, height=390*u.m)
-utcoffset = -4*u.hour  # Eastern Daylight Time
-time = Time('2012-7-12 23:00:00') - utcoffset
-m33altaz = m33.transform_to(AltAz(obstime=time,location=bear_mountain))  
-#"M33's Altitude = {0.alt:.2}".format(m33altaz)  
-#"M33's Altitude = 0.13 deg"
