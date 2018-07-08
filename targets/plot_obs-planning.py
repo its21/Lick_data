@@ -58,18 +58,21 @@ from astropy.coordinates import SkyCoord, EarthLocation, AltAz
 RA, DEC, Vmag, D, P, Amp,Red, ephemeris = np.load('targets_15_20_info.npy')
 ra_hac = np.array(RA); dec_hac = np.array(DEC)
 from astropy import units as u
-c = SkyCoord(ra=ra_hac*u.degree, dec=dec_hac*u.degree, frame='icrs')
+c = SkyCoord(ra=ra_hac[0]*u.degree, dec=dec_hac[0]*u.degree, frame='icrs')
 #can get other coordinates e.g. c.ra.hour  or c.to_string('dms')
 #'10d41m04.488s 41d16m09.012s'
 #c.to_string('hmsdms')
+#or to galactic: c_icrs.galactic  
 
 ##############################################################################
-# Use `astropy.coordinates.EarthLocation` to provide the location of Bear
-# Mountain and set the time to 11pm EDT on 2012 July 12:
-
-bear_mountain = EarthLocation(lat=41.3*u.deg, lon=-74*u.deg, height=390*u.m)
-utcoffset = -4*u.hour  # Eastern Daylight Time
-time = Time('2012-7-12 23:00:00') - utcoffset
+# Use `astropy.coordinates.EarthLocation` to provide the location of telescope
+# and set the time to UTC
+#lon='-121:38:14', lat='37:20:35', elev=1283
+#Shane_3m = EarthLocation(lat=37.2*u.deg, lon=-121*u.deg, height=1283*u.m)
+lick = EarthLocation.of_site('lick')
+#time = Time('2012-7-12 23:00:00') #in utc
+utcoffset = +6*u.hour
+time = Time.now() +utcoffset #utc
 
 ##############################################################################
 # `astropy.coordinates.EarthLocation.get_site_names` and
@@ -78,9 +81,9 @@ time = Time('2012-7-12 23:00:00') - utcoffset
 #
 # Use `astropy.coordinates` to find the Alt, Az coordinates of M33 at as
 # observed from Bear Mountain at 11pm on 2012 July 12.
-
-m33altaz = m33.transform_to(AltAz(obstime=time,location=bear_mountain))
-print("M33's Altitude = {0.alt:.2}".format(m33altaz))
+hac_altaz = c.transform_to(AltAz(obstime=time,location=lick))
+#hac_altaz = m33.transform_to(AltAz(obstime=time,location=lick))
+print("HAC Altitude = {0.alt:.2}".format(hac_altaz))
 
 ##############################################################################
 # This is helpful since it turns out M33 is barely above the horizon at this
@@ -90,21 +93,21 @@ print("M33's Altitude = {0.alt:.2}".format(m33altaz))
 # Find the alt,az coordinates of M33 at 100 times evenly spaced between 10pm
 # and 7am EDT:
 
-midnight = Time('2012-7-13 00:00:00') - utcoffset
+midnight = Time('2018-7-8 00:00:00') - utcoffset
 delta_midnight = np.linspace(-2, 10, 100)*u.hour
 frame_July13night = AltAz(obstime=midnight+delta_midnight,
-                          location=bear_mountain)
-m33altazs_July13night = m33.transform_to(frame_July13night)
+                          location=lick)
+m33altazs_July13night = c.transform_to(frame_July13night)
 
 ##############################################################################
 # convert alt, az to airmass with `~astropy.coordinates.AltAz.secz` attribute:
 
-m33airmasss_July13night = m33altazs_July13night.secz
+hacairmasss_July8night = m33altazs_July13night.secz
 
 ##############################################################################
 # Plot the airmass as a function of time:
 
-plt.plot(delta_midnight, m33airmasss_July13night)
+plt.plot(delta_midnight, hacairmasss_July8night)
 plt.xlim(-2, 10)
 plt.ylim(1, 4)
 plt.xlabel('Hours from EDT Midnight')
@@ -117,9 +120,9 @@ plt.show()
 
 from astropy.coordinates import get_sun
 delta_midnight = np.linspace(-12, 12, 1000)*u.hour
-times_July12_to_13 = midnight + delta_midnight
-frame_July12_to_13 = AltAz(obstime=times_July12_to_13, location=bear_mountain)
-sunaltazs_July12_to_13 = get_sun(times_July12_to_13).transform_to(frame_July12_to_13)
+times_July8_to_9 = midnight + delta_midnight
+frame_July12_to_13 = AltAz(obstime=times_July8_to_9, location=lick)
+sunaltazs_July12_to_13 = get_sun(times_July8_to_9).transform_to(frame_July12_to_13)
 
 
 ##############################################################################
@@ -128,13 +131,13 @@ sunaltazs_July12_to_13 = get_sun(times_July12_to_13).transform_to(frame_July12_t
 # to get a precise location of the moon.
 
 from astropy.coordinates import get_moon
-moon_July12_to_13 = get_moon(times_July12_to_13)
+moon_July12_to_13 = get_moon(times_July8_to_9)
 moonaltazs_July12_to_13 = moon_July12_to_13.transform_to(frame_July12_to_13)
 
 ##############################################################################
 # Find the alt,az coordinates of M33 at those same times:
 
-m33altazs_July12_to_13 = m33.transform_to(frame_July12_to_13)
+m33altazs_July12_to_13 = c.transform_to(frame_July12_to_13)
 
 ##############################################################################
 # Make a beautiful figure illustrating nighttime and the altitudes of M33 and
