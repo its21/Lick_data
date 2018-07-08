@@ -1,0 +1,13 @@
+input,s,a,'/Users/iuliasimion/Observing2014/hac_spectra/allyson/reduced/n6/f_n6.0029.fits',,,'input image'
+output,s,a,'/Users/iuliasimion/Observing2014/hac_spectra/allyson/reduced/n6/cr_f_n6.0029.fits',,,'cosmic ray cleaned output image'
+outmask,s,a,'/Users/iuliasimion/Observing2014/hac_spectra/allyson/reduced/n6/mask_f_n6.0029.fits',,,'output bad pixel map (.pl)'
+gain,r,h,2.7,,,'gain (electrons/ADU) (0=unknown)'
+readn,r,h,7.9,,,'read noise (electrons) (0=unknown)'
+statsec,s,h,'*,*',,,'section to use for automatic computation of gain'
+skyval,r,h,0.0,,,'sky level that has been subtracted (ADU)'
+sigclip,r,h,14.0,,,'detection limit for cosmic rays (sigma)'
+sigfrac,r,h,0.5,,,'fractional detection limit for neighbouring pixels'
+objlim,r,h,1.0,,,'contrast limit between CR and underlying object'
+niter,i,h,4,,,'maximum number of iterations'
+verbose,b,h,no
+mode,s,h,'al'
