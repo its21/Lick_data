@@ -84,7 +84,8 @@ time = Time.now() +utcoffset #utc
 hac_altaz = c.transform_to(AltAz(obstime=time,location=lick))
 #hac_altaz = m33.transform_to(AltAz(obstime=time,location=lick))
 print("HAC Altitude = {0.alt:.2}".format(hac_altaz))
-
+print('HAC airmass = ',1./np.cos(np.deg2rad(90.-hac_altaz.alt.value)))
+hac_altaz.secz
 ##############################################################################
 # This is helpful since it turns out M33 is barely above the horizon at this
 # time. It's more informative to find M33's airmass over the course of
@@ -93,7 +94,7 @@ print("HAC Altitude = {0.alt:.2}".format(hac_altaz))
 # Find the alt,az coordinates of M33 at 100 times evenly spaced between 10pm
 # and 7am EDT:
 
-midnight = Time('2018-7-8 00:00:00') - utcoffset
+midnight = Time('2018-7-8 00:00:00') 
 delta_midnight = np.linspace(-2, 10, 100)*u.hour
 frame_July13night = AltAz(obstime=midnight+delta_midnight,
                           location=lick)
