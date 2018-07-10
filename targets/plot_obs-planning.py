@@ -72,7 +72,7 @@ c = SkyCoord(ra=ra_hac[0]*u.degree, dec=dec_hac[0]*u.degree, frame='icrs')
 lick = EarthLocation.of_site('lick')
 #time = Time('2012-7-12 23:00:00') #in utc
 utcoffset = +6*u.hour
-time = Time.now() +utcoffset #utc
+time = Time.now() #+utcoffset #utc
 
 ##############################################################################
 # `astropy.coordinates.EarthLocation.get_site_names` and

@@ -44,8 +44,8 @@ c = SkyCoord(ra=ra_hac*u.degree, dec=dec_hac*u.degree, frame='icrs')
 #Shane_3m = EarthLocation(lat=37.2*u.deg, lon=-121*u.deg, height=1283*u.m)
 lick = EarthLocation.of_site('lick')
 #time = Time('2012-7-12 23:00:00') #in utc
-utcoffset = +6*u.hour
-time = Time.now() #+utcoffset #utc
+utcoffset = +3*u.hour
+time = Time.now() +utcoffset #utc
 
 ##############################################################################
 # `astropy.coordinates.EarthLocation.get_site_names` and
@@ -64,11 +64,14 @@ current_phase = np.round((phase(time.mjd-ephemeris, P)),2)
 HAC_names = np.arange(0, len(ra_hac),1)
 wh = (current_phase>0.2) & (current_phase<0.6)  & (airmass<2.5) & (airmass>0)
 status = np.zeros(len(ra_hac))
-observed = np.array([197,  37, 152, 22, 27, 186, 91, 26, 131, 11,\
+
+observed_mdm = np.array([197,  37, 152, 22, 27, 186, 91, 26, 131, 11,\
 	177, 9, 195, 96, 105, 102, 145, 51, 45, 52, 42, 156, 94, 191,\
-	194, 21, 166, 154, 120, 121, 187, 169, 31, 48, 115, 60, 158,\
-	113, 71, 47, 126, 169, 82, 143, 184 ])
-status[observed] = 1
+	194, 21, 166, 154, 120, 121, 187, 169, 31, 48, 115, 60, 158, 113, 71, 47, 126, 169, 82, 143, 184])
+
+observed_kast = np.array([41, 16, 72, 88, 98, 158, 189])
+status[observed_mdm] = 1
+status[observed_kast] = 2
 #print(HAC_names[wh], airmass[wh], current_phase[wh])
 for i in range(len(ra_hac[wh])):
     print('HAC '+str(HAC_names[wh][i]), status[wh][i],round(ra_hac[wh][i],4),  round(dec_hac[wh][i],4), 'Vmag=',Vmag[wh][i], 'dist=',D[wh][i],'airmass =' , np.round(airmass[wh],2)[i], 'phase = ', current_phase[wh][i])

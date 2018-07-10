@@ -46,14 +46,14 @@ import glob
 import uuid
 from astropy.table import Table
 from astropy.io import fits
-import pyfits, pylab
+#import pyfits, pylab
 import matplotlib.pyplot as plt
 import collections
 from scipy import optimize
 
 homedir = os.path.expanduser("~")
 night = 'n2'
-data_path = os.path.expanduser("/Users/iuliasimion/Observing2014/hac_spectra/allyson/data_reduction_example/data/")
+data_path = os.path.expanduser("/Users/iuliasimion/work/2018/observing/Lick/Lick_data/data_reduction_example/data/")
 data_path_reduced = os.path.expanduser("/Users/iuliasimion/Observing2014/hac_spectra/allyson/data_reduction_example/data_reduced")
 
    
@@ -62,11 +62,11 @@ def Openfile(i):
 
 def check_files():
     #check what you have in the folder
-    files = glob.glob(os.path.join(data_path, night+".????.fit"))# glob.glob('/data/n2.????.fit')
+    files = glob.glob(os.path.join(data_path, ".????.fit"))# glob.glob('/data/n2.????.fit')
     files.sort()
     for i, f in enumerate(files):
-       h = pyfits.open(f)[0].header
-       print i, h['OBJECT'],h['EXPTIME']
+       h = fits.open(f)[0].header
+       print(i, h['OBJECT'],h['EXPTIME'])
 
 def files():
     flat_frames = []
@@ -75,10 +75,11 @@ def files():
     arc_frames = []
     targets = []
     arc_targets = []
-    for filename in glob.glob(os.path.join(data_path, night+"*.fit")):
+    for filename in glob.glob(os.path.join(data_path, "*.fit")):
         hdr = fits.getheader(filename, 0)    
-        obje = hdr['OBJECT']
+        
         try:
+            obje = hdr['OBJECT']
             if obje == "FLAT":
                 flat_frames.append(filename)
             elif obje == "ZERO":
@@ -90,7 +91,7 @@ def files():
                 object_files.append(night+filename.lstrip(data_path))
                 targets.append(obje)
         except:
-            print "finished reading"
+            print("finished reading")
     return flat_frames, bias_frames, arc_frames, arc_targets, object_files, targets
 
 parfile = iraf.osfn( os.path.join(homedir,'/Users/iuliasimion/iraf/pars/files.par') )

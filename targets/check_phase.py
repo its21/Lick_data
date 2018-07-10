@@ -41,7 +41,6 @@ ra = np.array(RA); dec = np.array(DEC)
 alt = []
 for i in range(len(ra)):
     al = getalt(ra[i],  dec[i], t.datetime.year, t.datetime.month, t.datetime.day, t.datetime.hour, t.datetime.minute)
-    i, print(al)
     alt.append(al)
 alt = np.array(alt)
 airmass = 1./np.cos(np.deg2rad(90.-alt))
